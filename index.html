@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebuah Pesan Untukmu ❤️</title>
+    <style>
+        /* Ini adalah bagian CSS untuk mempercantik tampilan */
+        body {
+            background-color: #fce4ec; /* Warna latar belakang pink muda */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 400px;
+        }
+        h1 {
+            color: #e91e63; /* Warna pink tua */
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .tombol-pilihan {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Jarak antar tombol */
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff80ab; /* Warna tombol pink */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #e91e63; /* Warna saat kursor di atas tombol */
+            transform: scale(1.05); /* Sedikit membesar saat disentuh */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="konten-utama">
+        </div>
+
+    <script>
+        // Ini adalah bagian JavaScript untuk logika interaktif
+        
+        // Mengambil elemen container
+        const konten = document.getElementById('konten-utama');
+
+        // Fungsi untuk menampilkan halaman pertama
+        function mulai() {
+            konten.innerHTML = `
+                <h1>Selamat Pagi Pacarku! 💖</h1>
+                <p>Aku punya sesuatu buat kamu. Kamu mau lihat nggak?</p>
+                <div class="tombol-pilihan">
+                    <button onclick="tampilkanTekaTeki()">Mau Dong!</button>
+                    <button onclick="pilihanYakinTidak()">Hmm, nanti deh</button>
+                </div>
+            `;
+        }
+
+        function pilihanYakinTidak() {
+            konten.innerHTML = `
+                <h1>Yakin nih? 🤔</h1>
+                <p>Padahal seru loh. Ayolah...</p>
+                <div class="tombol-pilihan">
+                    <button onclick="tampilkanTekaTeki()">Oke deh, mau!</button>
+                </div>
+            `;
+        }
+        
+        function tampilkanTekaTeki() {
+            konten.innerHTML = `
+                <h1>Teka-Teki Pertama!</h1>
+                <p>Aku selalu ada di depanmu, tapi kamu tidak akan pernah bisa melihatku. Siapakah aku?</p>
+                <div class="tombol-pilihan">
+                    <button onclick="jawabanSalah()">Bayangan</button>
+                    <button onclick="jawabanBenar()">Masa Depan</button>
+                </div>
+            `;
+        }
+
+        function jawabanBenar() {
+            konten.innerHTML = `
+                <h1>Benar! Kamu Hebat! 🎉</h1>
+                <p>Seperti masa depan, aku harap masa depanku itu selalu bersamamu. I love you!</p>
+                <div class="tombol-pilihan">
+                    <button onclick="mulai()">Ulangi Lagi</button>
+                </div>
+            `;
+        }
+
+        function jawabanSalah() {
+            konten.innerHTML = `
+                <h1>Hampir Benar! Coba Lagi...</h1>
+                <p>Jawabanmu kurang romantis, hehe. Coba pikirkan sesuatu yang selalu ada di depan...</p>
+                <div class="tombol-pilihan">
+                    <button onclick="tampilkanTekaTeki()">Coba Jawab Lagi</button>
+                </div>
+            `;
+        }
+
+        // Memanggil fungsi 'mulai()' saat halaman pertama kali dimuat
+        window.onload = mulai;
+
+    </script>
+
+</body>
+</html>
