@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesan Galaksi Untukmu ✨</title>
+    <title>Sebuah Pesan Untuk Syafira ✨</title>
     <style>
-        /* CSS UNTUK TEMA BIRU GALAKSI */
+        /* CSS UNTUK TEMA BIRU GALAKSI (Tidak Diubah) */
         body {
-            /* Gradien biru tua pekat (navy) ke biru yang sedikit lebih terang */
             background: linear-gradient(to bottom, #0a1128, #001f54, #034078);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -15,52 +14,56 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px 0; /* Menambah sedikit padding */
             text-align: center;
-            color: #f0f8ff; /* Warna teks putih kebiruan (Alice Blue) */
+            color: #f0f8ff;
         }
         .container {
-            background-color: rgba(10, 17, 40, 0.5); /* Latar belakang semi-transparan biru sangat tua */
+            background-color: rgba(10, 17, 40, 0.5);
             padding: 30px 40px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             max-width: 90%;
-            width: 400px;
-            border: 1px solid rgba(173, 216, 230, 0.3); /* Border biru muda transparan */
-            backdrop-filter: blur(5px); /* Efek blur pada background di belakang container */
+            width: 450px; /* Sedikit dilebarkan untuk teks panjang */
+            border: 1px solid rgba(173, 216, 230, 0.3);
+            backdrop-filter: blur(5px);
         }
         h1 {
-            color: #add8e6; /* Warna biru muda terang untuk judul */
-            font-size: 28px;
+            color: #add8e6;
+            font-size: 26px;
             margin-bottom: 15px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Efek bayangan teks agar lebih menonjol */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
         p {
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         .tombol-pilihan {
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Mengubah tombol jadi vertikal */
+            align-items: center; /* Tombol di tengah */
             gap: 15px;
             margin-top: 20px;
         }
         button {
-            background-color: #4682b4; /* Warna Steel Blue untuk tombol */
+            background-color: #4682b4;
             color: white;
-            border: 1px solid #add8e6; /* Border biru muda */
+            border: 1px solid #add8e6;
             padding: 12px 25px;
             border-radius: 25px;
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            width: 100%; /* Tombol memenuhi lebar container */
+            max-width: 350px;
         }
         button:hover {
-            background-color: #6495ed; /* Warna Cornflower Blue saat disentuh */
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(173, 216, 230, 0.2); /* Efek cahaya saat disentuh */
+            background-color: #6495ed;
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(173, 216, 230, 0.2);
         }
     </style>
 </head>
@@ -70,62 +73,78 @@
         </div>
 
     <script>
-        // Bagian JavaScript ini sama seperti sebelumnya, tidak perlu diubah
+        // --- LOGIKA BARU SESUAI PERMINTAAN ANDA ---
+        
         const konten = document.getElementById('konten-utama');
 
-        function mulai() {
+        // Halaman 1: Sapaan Awal
+        function halamanAwal() {
             konten.innerHTML = `
-                <h1>Selamat Pagi Cintaku! ✨</h1>
-                <p>Ada kejutan galaksi spesial untukmu. Siap?</p>
+                <h1>Selamat Pagii, Syafira Arsellyn Dinova!!!</h1>
+                <p>How have your days been lately?</p>
                 <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Bintang-Bintang Menanti!</button>
-                    <button onclick="pilihanYakinTidak()">Kembali ke Bumi Dulu?</button>
+                    <button onclick="halamanSedih()">Lately, I've felt a bit sad...</button>
+                    <button onclick="halamanSenang()">They've been fine, I'm happy lately!</button>
                 </div>
             `;
         }
 
-        function pilihanYakinTidak() {
+        // Halaman 2: Jika memilih jawaban "sedih"
+        function halamanSedih() {
             konten.innerHTML = `
-                <h1>Kamu Yakin Mau Melewatkan Galaksi Ini? 🤔</h1>
-                <p>Sayang banget loh. Pikirin lagi deh...</p>
+                <h1>Oh no... why, my dear?</h1>
+                <p>Hearing that makes me sad too. But remember...</p>
                 <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Jelajahi Galaksi!</button>
+                    <button onclick="halamanAwal()">You deserve to be happy every day. Please.</button>
                 </div>
             `;
         }
 
-        function tampilkanTekaTeki() {
+        // Halaman 3: Jika memilih jawaban "senang"
+        function halamanSenang() {
             konten.innerHTML = `
-                <h1>Teka-Teki dari Galaksi</h1>
-                <p>Aku adalah rumah bagi miliaran bintang, termasuk bintang hatimu. Siapakah aku?</p>
+                <h1>Glad to hear that! ❤️</h1>
+                <p>I've been missing you lately...</p>
                 <div class="tombol-pilihan">
-                    <button onclick="jawabanSalah()">Planet</button>
-                    <button onclick="jawabanBenar()">Galaksi</button>
+                    <button onclick="halamanKangen()">Of course, I miss you too, Rizcky!</button>
+                    <button onclick="halamanBercanda()">Nope, I'm happy on my own.</button>
                 </div>
             `;
         }
 
-        function jawabanBenar() {
+        // Halaman 4: Jika memilih "kangen juga"
+        function halamanKangen() {
             konten.innerHTML = `
-                <h1>Tepat Sekali! Kamu Peneroka Galaksi Terbaik! 🌠</h1>
-                <p>Seperti galaksi yang tak terbatas, cintaku padamu juga tak terhingga. I love you more than all the stars!</p>
+                <h1>I'm the happiest person in the world knowing that.</h1>
+                <p>Thank you for choosing this. Now, screenshot this page and send it to me, my love!</p>
                 <div class="tombol-pilihan">
-                    <button onclick="mulai()">Terbang Lagi?</button>
+                    <button onclick="halamanAwal()">Ulangi dari Awal</button>
                 </div>
             `;
         }
 
-        function jawabanSalah() {
+        // Halaman 5: Jika memilih "tidak kangen" (bercanda)
+        function halamanBercanda() {
             konten.innerHTML = `
-                <h1>Hampir Sampai di Bintang! Coba Lagi...</h1>
-                <p>Pikirkan sesuatu yang lebih besar, tempat kumpulan banyak bintang berada...</p>
+                <h1>Are you sure...? 🤔</h1>
+                <p>Why? Are you mad at me, Fir?</p>
                 <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Cari Bintang yang Tepat</button>
+                    <button onclick="halamanSenang()">Hehe, I'm just kidding!</button>
+                    <button onclick="halamanMarah()">Yes, I'm mad at you, Rizcky.</button>
                 </div>
             `;
         }
-        
-        window.onload = mulai;
+
+        // Halaman 6: Jika memilih "marah"
+        function halamanMarah() {
+            konten.innerHTML = `
+                <h1>I'm so, so sorry, Fira...</h1>
+                <p>Now I feel really bad... Please screenshot this and send it to me so we can talk.</p>
+                `;
+        }
+
+        // Memanggil fungsi pertama saat halaman dimuat
+        window.onload = halamanAwal;
     </script>
 
 </body>
