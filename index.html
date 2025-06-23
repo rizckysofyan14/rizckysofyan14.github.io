@@ -1,128 +1,146 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebuah Pesan Untukmu ❤️</title>
-    <style>
-        /* Ini adalah bagian CSS untuk mempercantik tampilan */
-        body {
-            background-color: #fce4ec; /* Warna latar belakang pink muda */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            color: #333;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 90%;
-            width: 400px;
-        }
-        h1 {
-            color: #e91e63; /* Warna pink tua */
-            font-size: 24px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .tombol-pilihan {
-            display: flex;
-            justify-content: center;
-            gap: 15px; /* Jarak antar tombol */
-            margin-top: 20px;
-        }
-        button {
-            background-color: #ff80ab; /* Warna tombol pink */
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        button:hover {
-            background-color: #e91e63; /* Warna saat kursor di atas tombol */
-            transform: scale(1.05); /* Sedikit membesar saat disentuh */
-        }
-    </style>
-</head>
-<body>
+Berikut adalah kode HTML yang telah dimodifikasi dengan tema "biru galaksi" yang cantik:
 
-    <div class="container" id="konten-utama">
-        </div>
+Jika sebelumnya Anda telah menyimpan file `index.html`, Anda perlu **mengganti seluruh isi file tersebut** dengan kode di bawah ini.
 
-    <script>
-        // Ini adalah bagian JavaScript untuk logika interaktif
-        
-        // Mengambil elemen container
-        const konten = document.getElementById('konten-utama');
+**Perhatikan perubahan signifikan pada bagian `<style>` untuk mencapai tema biru galaksi.**
 
-        // Fungsi untuk menampilkan halaman pertama
-        function mulai() {
-            konten.innerHTML = `
-                <h1>Selamat Pagi Pacarku! 💖</h1>
-                <p>Aku punya sesuatu buat kamu. Kamu mau lihat nggak?</p>
-                <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Mau Dong!</button>
-                    <button onclick="pilihanYakinTidak()">Hmm, nanti deh</button>
-                </div>
-            `;
-        }
+Pastikan Anda menyimpan perubahan setelah mengganti kode. Setelah itu, coba refresh halaman situs web Anda setelah beberapa saat.
 
-        function pilihanYakinTidak() {
-            konten.innerHTML = `
-                <h1>Yakin nih? 🤔</h1>
-                <p>Padahal seru loh. Ayolah...</p>
-                <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Oke deh, mau!</button>
-                </div>
-            `;
-        }
-        
-        function tampilkanTekaTeki() {
-            konten.innerHTML = `
-                <h1>Teka-Teki Pertama!</h1>
-                <p>Aku selalu ada di depanmu, tapi kamu tidak akan pernah bisa melihatku. Siapakah aku?</p>
-                <div class="tombol-pilihan">
-                    <button onclick="jawabanSalah()">Bayangan</button>
-                    <button onclick="jawabanBenar()">Masa Depan</button>
-                </div>
-            `;
-        }
-
-        function jawabanBenar() {
-            konten.innerHTML = `
-                <h1>Benar! Kamu Hebat! 🎉</h1>
-                <p>Seperti masa depan, aku harap masa depanku itu selalu bersamamu. I love you!</p>
-                <div class="tombol-pilihan">
-                    <button onclick="mulai()">Ulangi Lagi</button>
-                </div>
-            `;
-        }
-
-        function jawabanSalah() {
-            konten.innerHTML = `
-                <h1>Hampir Benar! Coba Lagi...</h1>
-                <p>Jawabanmu kurang romantis, hehe. Coba pikirkan sesuatu yang selalu ada di depan...</p>
-                <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Coba Jawab Lagi</button>
-                </div>
-            `;
-        }
-
-        // Memanggil fungsi 'mulai()' saat halaman pertama kali dimuat
-        window.onload = mulai;
-
-    </script>
-
-</body>
-</html>
+```html
+ <!DOCTYPE html>
+ <html lang="id">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pesan Galaksi Untukmu ✨</title>
+     <style>
+         /* Tema Biru Galaksi yang Cantik */
+         body {
+             background: linear-gradient(to bottom, #0a1128, #001f54, #034078); /* Gradien biru tua ke biru sedang */
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             min-height: 100vh;
+             margin: 0;
+             text-align: center;
+             color: #f0f8ff; /* Warna teks putih pucat */
+             overflow: auto; /* Untuk berjaga-jaga jika konten melebihi layar */
+         }
+         .container {
+             background-color: rgba(255, 255, 255, 0.08); /* Latar belakang semi-transparan */
+             padding: 30px 40px;
+             border-radius: 15px;
+             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+             max-width: 90%;
+             width: 400px;
+             border: 1px solid rgba(255, 255, 255, 0.15); /* Border tipis */
+         }
+         h1 {
+             color: #add8e6; /* Warna biru muda untuk judul */
+             font-size: 28px;
+             margin-bottom: 15px;
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan teks */
+         }
+         p {
+             font-size: 18px;
+             line-height: 1.6;
+             margin-bottom: 20px;
+             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Efek bayangan teks */
+         }
+         .tombol-pilihan {
+             display: flex;
+             justify-content: center;
+             gap: 15px;
+             margin-top: 20px;
+         }
+         button {
+             background-color: #6495ed; /* Warna biru sedang untuk tombol */
+             color: white;
+             border: none;
+             padding: 12px 25px;
+             border-radius: 25px;
+             font-size: 16px;
+             cursor: pointer;
+             transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan tombol */
+         }
+         button:hover {
+             background-color: #4682b4; /* Warna lebih gelap saat dihover */
+             transform: scale(1.05);
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Efek bayangan lebih kuat saat dihover */
+         }
+     </style>
+ </head>
+ <body>
+ 
+     <div class="container" id="konten-utama">
+         </div>
+ 
+     <script>
+         // Ini adalah bagian JavaScript untuk logika interaktif
+ 
+         // Mengambil elemen container
+         const konten = document.getElementById('konten-utama');
+ 
+         // Fungsi untuk menampilkan halaman pertama
+         function mulai() {
+             konten.innerHTML = `
+                 <h1>Selamat Pagi Cintaku! ✨</h1>
+                 <p>Ada kejutan galaksi spesial untukmu. Siap?</p>
+                 <div class="tombol-pilihan">
+                     <button onclick="tampilkanTekaTeki()">Bintang-Bintang Menanti!</button>
+                     <button onclick="pilihanYakinTidak()">Kembali ke Bumi Dulu?</button>
+                 </div>
+             `;
+         }
+ 
+         function pilihanYakinTidak() {
+             konten.innerHTML = `
+                 <h1>Kamu Yakin Mau Melewatkan Galaksi Ini? 🤔</h1>
+                 <p>Sayang banget loh. Pikirin lagi deh...</p>
+                 <div class="tombol-pilihan">
+                     <button onclick="tampilkanTekaTeki()">Jelajahi Galaksi!</button>
+                 </div>
+             `;
+         }
+ 
+         function tampilkanTekaTeki() {
+             konten.innerHTML = `
+                 <h1>Teka-Teki dari Galaksi</h1>
+                 <p>Aku adalah rumah bagi miliaran bintang, termasuk bintang hatimu. Siapakah aku?</p>
+                 <div class="tombol-pilihan">
+                     <button onclick="jawabanSalah()">Planet</button>
+                     <button onclick="jawabanBenar()">Galaksi</button>
+                 </div>
+             `;
+         }
+ 
+         function jawabanBenar() {
+             konten.innerHTML = `
+                 <h1>Tepat Sekali! Kamu Peneroka Galaksi Terbaik! 🌠</h1>
+                 <p>Seperti galaksi yang tak terbatas, cintaku padamu juga tak terhingga. I love you more than all the stars!</p>
+                 <div class="tombol-pilihan">
+                     <button onclick="mulai()">Terbang Lagi?</button>
+                 </div>
+             `;
+         }
+ 
+         function jawabanSalah() {
+             konten.innerHTML = `
+                 <h1>Hampir Sampai di Bintang! Coba Lagi...</h1>
+                 <p>Pikirkan sesuatu yang lebih besar, tempat kumpulan banyak bintang berada...</p>
+                 <div class="tombol-pilihan">
+                     <button onclick="tampilkanTekaTeki()">Cari Bintang yang Tepat</button>
+                 </div>
+             `;
+         }
+ 
+         // Memanggil fungsi 'mulai()' saat halaman pertama kali dimuat
+         window.onload = mulai;
+ 
+     </script>
+ 
+ </body>
+ </html>
+```
