@@ -80,11 +80,11 @@
         // Halaman 1: Sapaan Awal
         function halamanAwal() {
             konten.innerHTML = `
-                <h1>Selamat Pagii, Syafira Arsellyn Dinova!!!</h1>
-                <p>How have your days been lately?</p>
+                <h1>Selamat Malam, Syafira Arsellyn Dinova!!!</h1>
+                <p>Gimana nihh kabar kamu akhir-akhir ini?</p>
                 <div class="tombol-pilihan">
-                    <button onclick="halamanSedih()">Lately, I've felt a bit sad...</button>
-                    <button onclick="halamanSenang()">They've been fine, I'm happy lately!</button>
+                    <button onclick="halamanSedih()">Aku lagi badmood dan juga sedih sih kayanya</button>
+                    <button onclick="halamanSenang()">Aku gwenchana banget ko, lagi happy seperti biasa!</button>
                 </div>
             `;
         }
@@ -92,8 +92,8 @@
         // Halaman 2: Jika memilih jawaban "sedih"
         function halamanSedih() {
             konten.innerHTML = `
-                <h1>Oh no... why, my dear?</h1>
-                <p>Hearing that makes me sad too. But remember...</p>
+                <h1>Oh no... why, firr?</h1>
+                <p>Parah dongggg masa udah 2025 masih sedih sedih aja, kamutuh berhak bahagia teruss...</p>
                 <div class="tombol-pilihan">
                     <button onclick="halamanAwal()">You deserve to be happy every day. Please.</button>
                 </div>
@@ -103,10 +103,10 @@
         // Halaman 3: Jika memilih jawaban "senang"
         function halamanSenang() {
             konten.innerHTML = `
-                <h1>Glad to hear that! ❤️</h1>
-                <p>I've been missing you lately...</p>
+                <h1>Kalo happy kan baru fira yang aku kenal (sipaling murah senyum)!</h1>
+                <p>Kangen banget ngechat kamu lagii...</p>
                 <div class="tombol-pilihan">
-                    <button onclick="halamanKangen()">Of course, I miss you too, Rizcky!</button>
+                    <button onclick="halamanKangen()">Certainly, i feel the same ky huhuu</button>
                     <button onclick="halamanBercanda()">Nope, I'm happy on my own.</button>
                 </div>
             `;
@@ -115,8 +115,8 @@
         // Halaman 4: Jika memilih "kangen juga"
         function halamanKangen() {
             konten.innerHTML = `
-                <h1>I'm the happiest person in the world knowing that.</h1>
-                <p>Thank you for choosing this. Now, screenshot this page and send it to me, my love!</p>
+                <h1>Samaan dong inimah, udahla kita kan partner yang saling membutuhkan (maunya sih gitu ya)</h1>
+                <p>Makasiii lohh udah bilang kangen wkwk, kamu bisa ss halaman ini terus kirim view once aja di wa yaa</p>
                 <div class="tombol-pilihan">
                     <button onclick="halamanAwal()">Ulangi dari Awal</button>
                 </div>
@@ -127,7 +127,7 @@
         function halamanBercanda() {
             konten.innerHTML = `
                 <h1>Are you sure...? 🤔</h1>
-                <p>Why? Are you mad at me, Fir?</p>
+                <p>Why? Kamu sebegitu keselnya sama aku ya fir?</p>
                 <div class="tombol-pilihan">
                     <button onclick="halamanSenang()">Hehe, I'm just kidding!</button>
                     <button onclick="halamanMarah()">Yes, I'm mad at you, Rizcky.</button>
