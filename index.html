@@ -3,55 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebuah Pesan Untukmu ❤️</title>
+    <title>Sebuah Pesan Untuk Syafira ✨</title>
     <style>
-        /* Ini adalah bagian CSS untuk mempercantik tampilan */
+        /* CSS UNTUK TEMA BIRU GALAKSI (Tidak Diubah) */
         body {
-            background-color: #fce4ec; /* Warna latar belakang pink muda */
+            background: linear-gradient(to bottom, #0a1128, #001f54, #034078);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px 0; /* Menambah sedikit padding */
             text-align: center;
-            color: #333;
+            color: #f0f8ff;
         }
         .container {
-            background-color: #ffffff;
+            background-color: rgba(10, 17, 40, 0.5);
             padding: 30px 40px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             max-width: 90%;
-            width: 400px;
+            width: 450px; /* Sedikit dilebarkan untuk teks panjang */
+            border: 1px solid rgba(173, 216, 230, 0.3);
+            backdrop-filter: blur(5px);
         }
         h1 {
-            color: #e91e63; /* Warna pink tua */
-            font-size: 24px;
+            color: #add8e6;
+            font-size: 26px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
         p {
             font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         .tombol-pilihan {
             display: flex;
-            justify-content: center;
-            gap: 15px; /* Jarak antar tombol */
+            flex-direction: column; /* Mengubah tombol jadi vertikal */
+            align-items: center; /* Tombol di tengah */
+            gap: 15px;
             margin-top: 20px;
         }
         button {
-            background-color: #ff80ab; /* Warna tombol pink */
+            background-color: #4682b4;
             color: white;
-            border: none;
+            border: 1px solid #add8e6;
             padding: 12px 25px;
             border-radius: 25px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            width: 100%; /* Tombol memenuhi lebar container */
+            max-width: 350px;
         }
         button:hover {
-            background-color: #e91e63; /* Warna saat kursor di atas tombol */
-            transform: scale(1.05); /* Sedikit membesar saat disentuh */
+            background-color: #6495ed;
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(173, 216, 230, 0.2);
         }
     </style>
 </head>
@@ -61,67 +73,78 @@
         </div>
 
     <script>
-        // Ini adalah bagian JavaScript untuk logika interaktif
+        // --- LOGIKA BARU SESUAI PERMINTAAN ANDA ---
         
-        // Mengambil elemen container
         const konten = document.getElementById('konten-utama');
 
-        // Fungsi untuk menampilkan halaman pertama
-        function mulai() {
+        // Halaman 1: Sapaan Awal
+        function halamanAwal() {
             konten.innerHTML = `
-                <h1>Selamat Pagi Pacarku! 💖</h1>
-                <p>Aku punya sesuatu buat kamu. Kamu mau lihat nggak?</p>
+                <h1>Selamat Pagii, Syafira Arsellyn Dinova!!!</h1>
+                <p>How have your days been lately?</p>
                 <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Mau Dong!</button>
-                    <button onclick="pilihanYakinTidak()">Hmm, nanti deh</button>
+                    <button onclick="halamanSedih()">Lately, I've felt a bit sad...</button>
+                    <button onclick="halamanSenang()">They've been fine, I'm happy lately!</button>
                 </div>
             `;
         }
 
-        function pilihanYakinTidak() {
+        // Halaman 2: Jika memilih jawaban "sedih"
+        function halamanSedih() {
             konten.innerHTML = `
-                <h1>Yakin nih? 🤔</h1>
-                <p>Padahal seru loh. Ayolah...</p>
+                <h1>Oh no... why, my dear?</h1>
+                <p>Hearing that makes me sad too. But remember...</p>
                 <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Oke deh, mau!</button>
-                </div>
-            `;
-        }
-        
-        function tampilkanTekaTeki() {
-            konten.innerHTML = `
-                <h1>Teka-Teki Pertama!</h1>
-                <p>Aku selalu ada di depanmu, tapi kamu tidak akan pernah bisa melihatku. Siapakah aku?</p>
-                <div class="tombol-pilihan">
-                    <button onclick="jawabanSalah()">Bayangan</button>
-                    <button onclick="jawabanBenar()">Masa Depan</button>
+                    <button onclick="halamanAwal()">You deserve to be happy every day. Please.</button>
                 </div>
             `;
         }
 
-        function jawabanBenar() {
+        // Halaman 3: Jika memilih jawaban "senang"
+        function halamanSenang() {
             konten.innerHTML = `
-                <h1>Benar! Kamu Hebat! 🎉</h1>
-                <p>Seperti masa depan, aku harap masa depanku itu selalu bersamamu. I love you!</p>
+                <h1>Glad to hear that! ❤️</h1>
+                <p>I've been missing you lately...</p>
                 <div class="tombol-pilihan">
-                    <button onclick="mulai()">Ulangi Lagi</button>
+                    <button onclick="halamanKangen()">Of course, I miss you too, Rizcky!</button>
+                    <button onclick="halamanBercanda()">Nope, I'm happy on my own.</button>
                 </div>
             `;
         }
 
-        function jawabanSalah() {
+        // Halaman 4: Jika memilih "kangen juga"
+        function halamanKangen() {
             konten.innerHTML = `
-                <h1>Hampir Benar! Coba Lagi...</h1>
-                <p>Jawabanmu kurang romantis, hehe. Coba pikirkan sesuatu yang selalu ada di depan...</p>
+                <h1>I'm the happiest person in the world knowing that.</h1>
+                <p>Thank you for choosing this. Now, screenshot this page and send it to me, my love!</p>
                 <div class="tombol-pilihan">
-                    <button onclick="tampilkanTekaTeki()">Coba Jawab Lagi</button>
+                    <button onclick="halamanAwal()">Ulangi dari Awal</button>
                 </div>
             `;
         }
 
-        // Memanggil fungsi 'mulai()' saat halaman pertama kali dimuat
-        window.onload = mulai;
+        // Halaman 5: Jika memilih "tidak kangen" (bercanda)
+        function halamanBercanda() {
+            konten.innerHTML = `
+                <h1>Are you sure...? 🤔</h1>
+                <p>Why? Are you mad at me, Fir?</p>
+                <div class="tombol-pilihan">
+                    <button onclick="halamanSenang()">Hehe, I'm just kidding!</button>
+                    <button onclick="halamanMarah()">Yes, I'm mad at you, Rizcky.</button>
+                </div>
+            `;
+        }
 
+        // Halaman 6: Jika memilih "marah"
+        function halamanMarah() {
+            konten.innerHTML = `
+                <h1>I'm so, so sorry, Fira...</h1>
+                <p>Now I feel really bad... Please screenshot this and send it to me so we can talk.</p>
+                `;
+        }
+
+        // Memanggil fungsi pertama saat halaman dimuat
+        window.onload = halamanAwal;
     </script>
 
 </body>
